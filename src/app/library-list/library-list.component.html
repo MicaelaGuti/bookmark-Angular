@@ -1,0 +1,19 @@
+<h3>Mi biblioteca</h3>
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0" *ngFor="let b of libraryList">
+      <div class="col-md-4">
+        <img [src]="b.image" class="img-fluid rounded-start" [alt]="b.title">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{b.title}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{b.author}}</li>
+            <li class="list-group-item">{{b.gender}}</li>
+        </ul>
+          <div class="card-body">
+            <button type="button" class="btn btn-warning">Seguir leyendo </button>
+      </div>
+    </div>
+  </div>

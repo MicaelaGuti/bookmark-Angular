@@ -1,0 +1,21 @@
+<h3>Libros</h3>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor= "let book of books" class="col" >
+        <div  class="card h-100" class="new" >
+          <img [src]="book.image" class="card-img-top" [alt]="book.title">
+          <div class="card-body">
+           
+            <h5 class="card-title">{{book.title }} <span class="badge rounded-pill text-bg-secondary" *ngIf="book.new==true">Nuevo</span></h5>
+          </div>
+            <p class="card-text">{{book.review}}</p>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{book.author}}</li>
+              <li class="list-group-item">{{book.gender}}</li>
+              <li class="list-group-item">{{book.stars}}​</li>
+            </ul>
+            <div class="card-body">
+              <button type="button" class="btn btn-primary" (click)="addLibrary(book)">Agregar a biblioteca</button>
+            </div>
+        </div>
+      </div>
+  </div>
